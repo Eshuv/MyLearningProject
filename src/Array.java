@@ -16,9 +16,10 @@ public class Array {
 
         for(int i = 0; i < marks.length; i++)
         {
-            Scanner sc = new Scanner(System.in);
-            int num = sc.nextInt();
-            marks[i] = num;
+            try (Scanner sc = new Scanner(System.in)) {
+                int num = sc.nextInt();
+                marks[i] = num;
+            }
         }
 
         System.out.println();
